@@ -1,0 +1,6 @@
+{
+    "extends": "mars/node",
+    "rules": {
+        "linebreak-style": "off"
+    }
+}

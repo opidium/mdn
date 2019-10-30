@@ -1,24 +1,31 @@
 {
   "name": "mdn",
   "version": "1.0.0",
-  "description": "",
+  "description": "MDN search API for Javascript",
+  "author": "SUVAJIT (suvajit.me@gmail.com)",
+  "license": "MIT",
   "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint --ext .js --ignore-path .gitignore .",
+    "lint": "eslint --fix --ext .js --ignore-path .gitignore .",
+    "start": "node index.js"
   },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-mars": "^1.0.4"
+  },
+  "keywords": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/opidium/mdn.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/opidium/mdn/issues"
   },
-  "homepage": "https://github.com/opidium/mdn#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "node-fetch": "^2.6.0"
-  }
+  "homepage": "https://github.com/opidium/mdn#readme"
 }
