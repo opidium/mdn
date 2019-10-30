@@ -3,11 +3,17 @@ const express = require('express');
 const app = express();
 const mdn = [];
 
-app.get('/', async (req, res) => {
-	if (!req.query.search) return res.status(401).json({ status: 401, uwu: 'no query provided!' });
+app.use((req, res, next) => {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+	next();
+});
+
+app.get('/search', async (req, res) => {
+	if (!req.query.q) return res.status(401).json({ status: 401, uwu: 'no query provided!' });
 
 	const item = mdn.find(({ title }) => {
-		const query = req.query.search ? req.query.search.toLowerCase().replace(/.prototype./g, '.') : null;
+		const query = req.query.q ? req.query.q.toLowerCase().replace(/.prototype./g, '.') : null;
 		return title.toLowerCase().replace(/\(\)/g, '').replace(/.prototype./g, '.') === query;
 	});
 
@@ -15,6 +21,8 @@ app.get('/', async (req, res) => {
 
 	return res.json({ url: item.url, title: item.title, summary: item.summary });
 });
+
+app.use((req, res) => res.send({ uwu: 'you are in the wrong part of town!' }));
 
 app.listen(8081, async () => {
 	await MozilaSearch(mdn);
