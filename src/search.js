@@ -26,5 +26,6 @@ module.exports = async (pages = []) => {
 		const data = await fetch(`https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/${reference}$children?expand`).then(res => res.json());
 		subpages(data.subpages, pages);
 	}
+
 	return pages;
 };

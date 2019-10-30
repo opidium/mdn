@@ -12,10 +12,7 @@ app.use((req, res, next) => {
 app.get('/search', async (req, res) => {
 	if (!req.query.q) return res.status(401).json({ status: 401, uwu: 'no query provided!' });
 
-	const item = mdn.find(({ title }) => {
-		const query = req.query.q ? req.query.q.toLowerCase().replace(/.prototype./g, '.') : null;
-		return title.toLowerCase().replace(/\(\)/g, '').replace(/.prototype./g, '.') === query;
-	});
+	const item = mdn.find(({ title }) => title.toLowerCase().replace(/\(\)/g, '').replace(/.prototype./g, '.') === req.query.q.toLowerCase().replace(/.prototype./g, '.'));
 
 	if (!item) return res.status(402).json({ status: 402, uwu: 'requested information not found!' });
 
