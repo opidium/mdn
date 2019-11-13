@@ -20,7 +20,10 @@
     "eslint": "^6.6.0",
     "eslint-config-mars": "^1.0.4"
   },
-  "keywords": [],
+  "keywords": [
+    "mdn",
+    "mdn-api"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/opidium/mdn.git"
