@@ -1,35 +1,34 @@
 {
-  "name": "mdn",
-  "version": "1.0.0",
-  "description": "MDN search API for Javascript",
-  "author": "SUVAJIT (suvajit.me@gmail.com)",
-  "license": "MIT",
-  "main": "src/index.js",
-  "private": true,
-  "scripts": {
-    "test": "eslint --ext .js --ignore-path .gitignore .",
-    "lint": "eslint --fix --ext .js --ignore-path .gitignore .",
-    "start": "node src/index.js"
-  },
-  "dependencies": {
-    "express": "^4.17.1",
-    "node-fetch": "^2.6.0",
-    "turndown": "^5.0.3"
-  },
-  "devDependencies": {
-    "eslint": "^6.6.0",
-    "eslint-config-mars": "^1.0.4"
-  },
-  "keywords": [
-    "mdn",
-    "mdn-api"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/opidium/mdn.git"
-  },
-  "bugs": {
-    "url": "https://github.com/opidium/mdn/issues"
-  },
-  "homepage": "https://github.com/opidium/mdn#readme"
+    "name": "mdn",
+    "version": "1.0.0",
+    "description": "MDN search API for Javascript",
+    "author": "SUVAJIT (suvajit.me@gmail.com)",
+    "license": "MIT",
+    "main": "src/index.js",
+    "private": true,
+    "scripts": {
+        "test": "eslint --ext .js --ignore-path .gitignore .",
+        "lint": "eslint --fix --ext .js --ignore-path .gitignore .",
+        "start": "node src/index.js"
+    },
+    "dependencies": {
+        "node-fetch": "^2.6.0",
+        "turndown": "^5.0.3"
+    },
+    "devDependencies": {
+        "eslint": "^6.6.0",
+        "eslint-config-mars": "^1.0.4"
+    },
+    "keywords": [
+        "mdn",
+        "mdn-api"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/opidium/mdn.git"
+    },
+    "bugs": {
+        "url": "https://github.com/opidium/mdn/issues"
+    },
+    "homepage": "https://github.com/opidium/mdn#readme"
 }
